@@ -1,0 +1,100 @@
+/*FONTE IMPORTADA DO GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+
+/*RESET CSS E DEFINIÇÃO DA FONTE DA PÁGINA*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*ESTILIZAÇAO GERAL DO HTML E BODY*/
+html, body {
+    /*transforma em um container de grade*/
+    display: grid; 
+
+    /*usa a altura total da tela*/
+    height: 100%;
+
+    /*alinha os itens no centro (verticalmente e horizontalmente)*/
+    place-items: center;
+
+    /*cor do fundo da tela:*/
+    background-color: black;
+}
+
+/*ESTILIZAÇÃO DA <A>*/
+.botao a{
+
+    /*define a posição do conteiner em relativa*/
+    position: relative;
+
+    /*transforma o conteiner em um bloco*/
+    display: block;
+
+    /*define a altura em 70px e largura em 220px*/
+    height: 70px;
+    width: 220px;
+    
+    /*cor do fundo do bloco:*/
+    background: linear-gradient(115deg, #4f6fcf, #15b5b5, #a767e5, #631c90, #dc43b8);
+
+    /*alinhamento do texto:*/
+    text-align: center;
+
+    /*deixa a borda do bloco levemente arredondada*/
+    border-radius: 10px;
+}
+
+/*ESTILIZAÇÃO DA <SPAN>*/
+.botao a span {
+
+    /*deixa sua altura em 88% e sua largura em 96% do elemento pai (tag a)*/
+    height: 88%;
+    width: 96%;
+
+    /*cor do fundo:*/
+    background-color: #111;
+
+    /*transforma o span em um bloco*/
+    display: block;
+
+    /*posicionado de forma absoluta em relação ao <a>*/
+    position: absolute;
+
+    /*move o topo e a borda esquerda do bloco para 50% do elemento pai (tag a)*/
+    top: 50%;
+    left: 50%;
+
+    /*corrige o deslocamento do top e left,
+    movendo metade de sua largura para a esquerda, e metade de sua altura para cima, alinhando-o ao elemento pai*/
+    transform: translate(-50%, -50%);
+
+    border-radius: 6px;
+
+    /*altura da linha do texto:*/
+    line-height: 62px;
+
+    /*cor do texto:*/
+    color: wheat;
+
+    /*tamanho da fonte:*/
+    font-size: 25px;
+
+}
+
+/*DEFININDO A ANIMAÇÃO DO BOTÃO COMO HOVER  */
+.botao a:hover {
+
+    /*animação com velocidade constante de 0.4 segundos infinita*/
+    animation: animado 0.4s linear infinite;
+}
+@keyframes animado {
+
+    /*aplica um filtro de cor que roda a matiz (hue) em -360 graus
+    no final do ciclo, a cor deu uma volta completa no matiz, dando um efeito de mudança continua*/
+    100%{
+        filter: hue-rotate(-360deg);
+    }
+}
